@@ -1,14 +1,10 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main page</title>
-</head>
-<body>
-    <h1>Здравствуй, пользователь!</h1>
-    <img src="https://memepedia.ru/wp-content/uploads/2020/11/auf-mem.jpg" alt="wolf" width="200">
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+    <h1>Основная страница сайта</h1>
+    <img src="https://memepedia.ru/wp-content/uploads/2020/11/auf-mem.jpg" alt="wolf" width="500">
+{% endblock %}
