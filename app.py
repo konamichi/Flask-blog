@@ -18,7 +18,7 @@ class Article(db.Model):
         return '<Article %r>' % self.id
 
 
-# связываем функцию с URL
+# связываем функции с URL
 @app.route('/')
 @app.route('/home')
 def index():
@@ -30,6 +30,9 @@ def about():
     return render_template("about.html")
 
 
+@app.route('/create-article')
+def create_article():
+    return render_template("create_article.html")
 
 
 if __name__ == "__main__":
