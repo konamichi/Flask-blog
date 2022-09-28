@@ -31,6 +31,12 @@ def about():
     return render_template("about.html")
 
 
+@app.route('/posts')
+def posts():
+    post = Article.query.order_by(Article.date).all()
+    return render_template("posts.html", post=post)
+
+
 @app.route('/create-article', methods=['POST', 'GET'])
 def create_article():
     if request.method == 'POST':
