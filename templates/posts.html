@@ -8,12 +8,12 @@
 <div class="container mt-5">
     <h1>Все статьи на сайте</h1>
 
-    {% for elem in post %}
+    {% for elem in posts %}
     <div class="alert alert-info">
         <h2>{{ elem.title }}</h2>
         <p>{{ elem.intro }}</p>
         <p><b>{{ elem.date.date() }}</b></p>
-        <button class="btn btn-warning">Открыть полностью</button>
+        <a href="/posts/{{ elem.id }}" class="btn btn-warning">Открыть полностью</a>
     </div>
     {% endfor %}
 </div>
