@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+
+    <div class="alert alert-info">
+        <p>{{ post.text }}</p>
+        <p><b>{{ post.date.date() }}</b></p>
+    </div>
+</div>
+{% endblock%}
